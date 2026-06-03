@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'https://inventory-order-management-system-production-b310.up.railway.app',
+  baseURL: 'https://inventory-order-management-system-lqz3.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
