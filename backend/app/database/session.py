@@ -3,9 +3,16 @@ from sqlalchemy.orm import sessionmaker
 
 from app.core.config import settings
 
-engine = create_engine(settings.database_url, echo=False, future=True)
-SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, future=True)
+print("DATABASE_URL =", settings.database_url)
 
+engine = create_engine(settings.database_url, echo=True, future=True)
+
+SessionLocal = sessionmaker(
+    bind=engine,
+    autoflush=False,
+    autocommit=False,
+    future=True
+)
 
 def get_db():
     db = SessionLocal()
